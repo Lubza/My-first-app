@@ -71,18 +71,25 @@ st.markdown('##')
 Total_net_liq = round(df_selection['% of Net Liq'].sum(), 2)
 Total_MV = round(df_selection['Market Value'].sum(), 1)
 Account_balance = round(((100/Total_net_liq)*Total_MV), 2)
+#Dividend calculation
+Divi = df['Dividends']
+Shares = df['Position']
+Total_div_year = (Divi * Shares).sum()
+div_yield = (Total_div_year/Total_MV) * 100
 
-left_column, middle_column, right_column = st.columns(3)
+left_column, middle_column1, middle_column2, right_column = st.columns(4)
 with left_column:
     st.subheader("Total_net_liq:")
-    st.subheader(f"% {Total_net_liq:,}")
-with middle_column:
+    st.subheader(f"{Total_net_liq:,}%")
+with middle_column1:
     st.subheader("Portfolio Market Value:")
-    st.subheader(f"USD {Total_MV:,}")
-
-with right_column:
+    st.subheader(f"{Total_MV:,}USD")
+with middle_column2:
     st.subheader("Balance:")
-    st.subheader(f"USD {Account_balance:,}")
+    st.subheader(f"{Account_balance:,}USD ")
+with right_column:
+    st.subheader("Divident yield:")
+    st.subheader(f"{div_yield:,}%")
     
 
 st.markdown("---")
