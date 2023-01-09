@@ -80,16 +80,16 @@ div_yield = (Total_div_year/Total_MV) * 100
 left_column, middle_column1, middle_column2, right_column = st.columns(4)
 with left_column:
     st.subheader("Total_net_liq:")
-    st.subheader(f"{Total_net_liq:,}%")
+    st.subheader(f"{Total_net_liq:,} %")
 with middle_column1:
     st.subheader("Portfolio Market Value:")
-    st.subheader(f"{Total_MV:,}USD")
+    st.subheader(f"{Total_MV:,} USD")
 with middle_column2:
     st.subheader("Balance:")
-    st.subheader(f"{Account_balance:,}USD ")
+    st.subheader(f"{Account_balance:,} USD ")
 with right_column:
     st.subheader("Divident yield:")
-    st.subheader(f"{div_yield:,}%")
+    st.subheader(f"{div_yield:,} %")
     
 
 st.markdown("---")
