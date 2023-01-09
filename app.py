@@ -75,7 +75,7 @@ Account_balance = round(((100/Total_net_liq)*Total_MV), 2)
 Divi = df['Dividends']
 Shares = df['Position']
 Total_div_year = (Divi * Shares).sum()
-div_yield = (Total_div_year/Total_MV) * 100
+div_yield = round(((Total_div_year/Total_MV) * 100),2)
 
 left_column, middle_column1, middle_column2, right_column = st.columns(4)
 with left_column:
@@ -88,7 +88,7 @@ with middle_column2:
     st.subheader("Balance:")
     st.subheader(f"{Account_balance:,} USD ")
 with right_column:
-    st.subheader("Divident yield:")
+    st.subheader("Dividend yield:")
     st.subheader(f"{div_yield:,} %")
     
 
