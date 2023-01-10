@@ -116,3 +116,18 @@ fig_div = px.bar(
 )
 
 st.plotly_chart(fig_div)
+
+#Market Value by currency
+portfolio_by_currency_in_MV = (
+
+    df.selection.group(by=["CCY"]).sum()["Market Value"]
+)
+
+fig_ccy = px.pie(
+        portfolio_by_currency_in_MV,
+        values="Market Value",
+        names="CCY",
+        title="Market Value by currency"
+)
+
+st.plotly_chart(fig_ccy)
