@@ -121,7 +121,7 @@ st.markdown("---")
 
 Portfolio_by_currency = (
 
-df_selection.group(by=["CCY"]).sum()[["Market Value"]].sort_values(by="Market Value")
+df_selection.groupby(by=["CCY"]).sum()[["Market Value"]].sort_values(by="Market Value")
 
 )
 
