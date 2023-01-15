@@ -94,41 +94,41 @@ with right_column:
 
 st.markdown("---")
 
-#st.dataframe(df_selection)
-#st.dataframe(df)
+st.dataframe(df_selection)
+st.dataframe(df)
 
 # Expected Dividend by month
 
-#Expected_dividend_by_month = (
+Expected_dividend_by_month = (
 
-#df_selection.groupby(by=["Month"]).sum()[["Next_div_receiveable"]].sort_values(by="Next_div_receiveable")
+df_selection.groupby(by=["Month"]).sum()[["Next_div_receiveable"]].sort_values(by="Next_div_receiveable")
 
-#)
+)
 
-#fig_div = px.bar(
-        #Expected_dividend_by_month,
-        #y = "Next_div_receiveable",
-       # x = Expected_dividend_by_month.index,
-        #orientation="v",
-       # title="<b>Expected Dividend by month<\b>",
-       # color_discrete_sequence=["#0083B8"] * len(Expected_dividend_by_month),
-       # template="plotly_white"
-#)
+fig_div = px.bar(
+        Expected_dividend_by_month,
+        y = "Next_div_receiveable",
+        x = Expected_dividend_by_month.index,
+        orientation="v",
+        title="<b>Expected Dividend by month<\b>",
+        color_discrete_sequence=["#0083B8"] * len(Expected_dividend_by_month),
+        template="plotly_white"
+)
 
-#st.plotly_chart(fig_div)
+st.plotly_chart(fig_div)
 
 # Portfolio by currency
 
-Portfolio_by_currency = (
+#Portfolio_by_currency = (
 
-df_selection.groupby(by=["CCY"]).sum()[["Market Value"]].sort_values(by="Market Value")
+#df_selection.groupby(by=["CCY"]).sum()[["Market Value"]].sort_values(by="Market Value")
 
-)
+#)
 
-fig_ccy = px.pie(
-    Portfolio_by_currency,
-    names='CCY',
-    values='Market Value'
-)
+#fig_ccy = px.pie(
+ #   Portfolio_by_currency,
+  #  names='CCY',
+   # values='Market Value'
+#)
 
-st.plotly_chart(fig_ccy)
+#st.plotly_chart(fig_ccy)
