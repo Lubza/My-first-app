@@ -97,6 +97,8 @@ st.markdown("---")
 #st.dataframe(df_selection)
 #st.dataframe(df)
 
+col1, col2 = st.columns(2)
+
 # Expected Dividend by month
 
 Expected_dividend_by_month = (
@@ -110,25 +112,20 @@ fig_div = px.bar(
         y = "Next_div_receiveable",
         x = Expected_dividend_by_month.index,
         orientation="v",
-        title="<b>Expected Dividend by month<\b>",
+        title="<b>Expected Dividend by month</b>",
         color_discrete_sequence=["#0083B8"] * len(Expected_dividend_by_month),
         template="plotly_white"
 )
 
-st.plotly_chart(fig_div)
+col1.plotly_chart(fig_div)
 
 # Portfolio by currency
 
-#Portfolio_by_currency = (
+fig_ccy = px.pie(
+        df,
+        values='Market Value',
+        names='CCY',
+        title="<b>Portfolio by currency</b>",
+)
 
-#df_selection.groupby(by=["CCY"]).sum()[["Market Value"]].sort_values(by="Market Value")
-
-#)
-
-#fig_ccy = px.pie(
- #   Portfolio_by_currency,
-  #  names='CCY',
-   # values='Market Value'
-#)
-
-#st.plotly_chart(fig_ccy)
+col2.plotly_chart(fig_ccy)
