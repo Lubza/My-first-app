@@ -94,8 +94,8 @@ with right_column:
 
 st.markdown("---")
 
-st.dataframe(df_selection)
-st.dataframe(df)
+#st.dataframe(df_selection)
+#st.dataframe(df)
 
 # Expected Dividend by month
 
