@@ -129,3 +129,15 @@ fig_ccy = px.pie(
 )
 
 col2.plotly_chart(fig_ccy)
+
+#Portfolio by Industry
+
+fig_industry = px.pie(
+        df,
+        values='Market Value',
+        names='Industry',
+        title='<b>Portfolio by industry</b>'
+        
+)
+
+st.plotly_chart(fig_industry)
