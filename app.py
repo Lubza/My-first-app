@@ -79,7 +79,7 @@ div_yield = round(((Total_div_year/Total_MV) * 100),2)
 
 left_column, middle_column1, middle_column2, right_column = st.columns(4)
 with left_column:
-    st.subheader("Total_net_liq:")
+    st.subheader("Exposure:")
     st.subheader(f"{Total_net_liq:,} %")
 with middle_column1:
     st.subheader("Portfolio Market Value:")
