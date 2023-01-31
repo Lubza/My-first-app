@@ -21,7 +21,7 @@ st.set_page_config(page_title="Portfolio overview",
 
 #df = pd.read_csv(adress, engine='python')
 
-df = get_data(r'data/Portfolio_dataset_1222.csv')
+df = get_data(r'data/Portfolio_dataset_0123.csv')
 
 
 #---- SIDEBAR -----
