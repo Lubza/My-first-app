@@ -152,8 +152,8 @@ df_selection.groupby(by=["Industry"]).sum()[["Unrealized P&L"]].sort_values(by="
 
 fig_industry_unrlzd = px.bar(
         Unrealized_gl_by_sector,
-        y = "Industry",
-        x = 'Unrealized P&L',
+        y = "Unrealized P&L",
+        x = 'Industry',
         orientation="v",
         title="<b>Unrealized P/L by sector</b>",
         color_discrete_sequence=["#90b800"] * len(Unrealized_gl_by_sector),
