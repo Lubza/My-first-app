@@ -109,7 +109,7 @@ df_selection.groupby(by=["Month"]).sum()[["Next_div_receiveable"]].sort_values(b
 
 fig_div = px.bar(
         Expected_dividend_by_month,
-        y = "Next_div_receiveable",
+        y = "Expected Dividend in USD",
         x = Expected_dividend_by_month.index,
         orientation="v",
         title="<b>Expected Dividend by month</b>",
