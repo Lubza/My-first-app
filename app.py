@@ -89,7 +89,7 @@ with middle_column2:
     st.subheader(f"{Account_balance:,} USD ")
 with right_column:
     st.subheader("Dividend yield:")
-    st.subheader(f"{div_yield:,} %   or  {Total_div_year:,} USD")
+    st.subheader(f"{div_yield:,} %      or      {Total_div_year:,} USD")
     
 
 st.markdown("---")
