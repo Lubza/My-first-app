@@ -141,3 +141,23 @@ fig_industry = px.pie(
 )
 
 st.plotly_chart(fig_industry)
+
+#Unrealized gain/loss by sector
+
+Unrealized_gl_by_sector = (
+
+df_selection.groupby(by=["Industry"]).sum()[["Unrealized P&L"]].sort_values(by="Unrealized P&L")
+
+)
+
+fig_industry_unrlzd = px.bar(
+        Unrealized_gl_by_sector, fontweight="bold", fontsize=20,
+        y = "Unrealized P&L",
+        x = 'Industry',
+        orientation="v",
+        title="<b>Unrealized P/L by sector</b>",
+        color_discrete_sequence=["#90b800"] * len(Unrealized_gl_by_sector),
+        template="plotly_white"
+)
+
+st.plotly_chart(fig_industry_unrlzd)
