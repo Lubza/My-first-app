@@ -21,7 +21,7 @@ st.set_page_config(page_title="Portfolio overview",
 
 #df = pd.read_csv(adress, engine='python')
 
-df = get_data(r'data/Portfolio_dataset_0123.csv')
+df = get_data(r'data/Portfolio_dataset_0223.csv')
 
 
 #---- SIDEBAR -----
@@ -64,7 +64,7 @@ df_selection = df.query(
 
 
 #-----MAINPAGE-----
-st.title(":bar_chart: Portfolio Overview as of JAN 2023")
+st.title(":bar_chart: Portfolio Overview as of FEB 2023")
 st.markdown('##')
 
 #TOP KPI's
